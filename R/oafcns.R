@@ -174,7 +174,7 @@ oa_analysis <- function(ctd_data, bb_data){
   # inside the mergedfs function
 
   #Rename columns for CTD and Bottle
-  ctd_data <- ctd_data %>% rename(
+  ctd_data <- ctd_data %>% dplyr::rename(
     season = season,
     agency = agency,
     sampledate = sampledate,
@@ -191,7 +191,7 @@ oa_analysis <- function(ctd_data, bb_data){
     ctd_pH = ph
   )
 
-  bb_data <- bb_data %>% rename(
+  bb_data <- bb_data %>% dplyr::rename(
     agency = agency,
     season = season,
     bottle = bottle,
@@ -255,7 +255,7 @@ oa_analysis <- function(ctd_data, bb_data){
 
   #rename colnames for analysis tables
   ctd_analysis <- ctd_analysis %>%
-    rename(
+    dplyr::rename(
       TA = ctd_ta,
       Omega = ctd_omega,
       Temperature = ctd_temperature,
@@ -265,7 +265,7 @@ oa_analysis <- function(ctd_data, bb_data){
       pH_Corrected = ctd_pH_corrected
     )
   bb_analysis <- bb_analysis %>%
-    rename(
+    dplyr::rename(
       Omega = bb_omega,
       TA = bb_ta,
       pH = bb_pH,
