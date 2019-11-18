@@ -216,25 +216,25 @@ oa_analysis <- function(ctd_data, bb_data){
   )$OmegaAragonite
 
   #rename colnames for analysis tables
-  ctd_analysis <- ctd_analysis %>%
-    dplyr::rename(
-      TA = ctd_ta,
-      Omega = ctd_omega,
-      Temperature = ctd_temperature,
-      Salinity = ctd_salinity,
-      Density = ctd_density,
-      pH = ctd_pH,
-      pH_Corrected = ctd_pH_corrected
-    )
-  bb_analysis <- bb_analysis %>%
-    dplyr::rename(
-      Omega = bb_omega,
-      TA = bb_ta,
-      pH = bb_pH,
-      Salinity = bb_salinity,
-      FieldRep2 = fieldrep2,
-      Temperature = bb_temperature
-    )
+  #ctd_analysis <- ctd_analysis %>%
+  #  dplyr::rename(
+  #    TA = ctd_ta,
+  #    Omega = ctd_omega,
+  #    Temperature = ctd_temperature,
+  #    Salinity = ctd_salinity,
+  #    Density = ctd_density,
+  #    pH = ctd_pH,
+  #    pH_Corrected = ctd_pH_corrected
+  #  )
+  #bb_analysis <- bb_analysis %>%
+  #  dplyr::rename(
+  #    Omega = bb_omega,
+  #    TA = bb_ta,
+  #    pH = bb_pH,
+  #    Salinity = bb_salinity,
+  #    FieldRep2 = fieldrep2,
+  #    Temperature = bb_temperature
+  #  )
 
   #End of OA Script
 
