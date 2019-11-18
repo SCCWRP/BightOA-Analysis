@@ -173,42 +173,6 @@ oa_analysis <- function(ctd_data, bb_data){
   # dplyr::inner_join(ctd_data, bb_data, by = c('Season','Agency','SampleDate','Station','FieldRep','LabRep','Depth'), suffix = c('.ctd','.bottle'))
   # inside the mergedfs function
 
-  #Rename columns for CTD and Bottle
-  ctd_data <- ctd_data %>% dplyr::rename(
-    sampledate = SampleDate,
-    sampletime = SampleTime,
-    station = Station,
-    depth = Depth,
-    fieldrep = FieldRep,
-    labrep = LabRep,
-    latitude = Latitude,
-    longitude = Longitude,
-    ctd_temperature = Temperature,
-    ctd_salinity = Salinity,
-    ctd_density = Density,
-    ctd_pH = pH
-  )
-
-  bb_data <- bb_data %>% dplyr::rename(
-    agency = Agency,
-    season = Season,
-    bottle = Bottle,
-    lims = LIMS,
-    cruise = Cruise,
-    sampledate = SampleDate,
-    sampletime = SampleTime,
-    station = Station,
-    depth = Depth,
-    fieldrep = FieldRep,
-    labrep = LabRep,
-    notes = Notes,
-    bb_ta = TA,
-    bb_pH = pH,
-    bb_salinity = Salinity,
-    fieldrep2 = FieldRep2,
-    bb_temperature = Temperature,
-  )
-
   #Construct analysis dataframes
   ctd_analysis <- ctd_data
   bb_analysis <- bb_data
