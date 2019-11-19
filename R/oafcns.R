@@ -218,7 +218,7 @@ oa_analysis <- function(ctd_data, bb_data){
     b = b
   )$OmegaAragonite
 
-  rename colnames for analysis tables
+  # rename colnames for analysis tables
   ctd_analysis <- ctd_analysis %>%
     dplyr::rename(
       TA = ctd_ta,
