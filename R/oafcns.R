@@ -172,7 +172,10 @@ oa_analysis <- function(ctd_data, bb_data){
   # DO THIS INSTEAD LATER
   # dplyr::inner_join(ctd_data, bb_data, by = c('Season','Agency','SampleDate','Station','FieldRep','LabRep','Depth'), suffix = c('.ctd','.bottle'))
   # inside the mergedfs function
-
+  
+  ctd_data$station <- as.character(ctd_data$station)
+  bb_data$station <- as.character(bb_data$station)
+  
   #Construct analysis dataframes
   ctd_analysis <- ctd_data
   bb_analysis <- bb_data
